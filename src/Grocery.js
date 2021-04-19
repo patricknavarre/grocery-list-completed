@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { GroceryContext} from "./context/context";
+import { GroceryContext } from "./context/context";
 
 function Grocery() {
 
@@ -10,6 +10,8 @@ function Grocery() {
     return (
         <div>
            {grocery}
+           <button>Grabbed</button>
+           <button>Delete</button>
         </div>
     )
 }

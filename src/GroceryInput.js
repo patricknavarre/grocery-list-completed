@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useState, useContext } from 'react';
+import { GroceryInputContext } from "./context/context";
 
 const GroceryInput = () => {
-    function handleGrocerySubmit() {}
+
+    const { addGrocery } = useContext(GroceryInputContext);
+
+    const [ grocery, setGrocery ] = useState("")
+
+
+    function handleGrocerySubmit(event) {
+        event.preventDefault();
+
+        addGrocery(grocery)
+    }
 
 
     return (
         <form onSubmit={handleGrocerySubmit}>
-        <input type="text" />
+        <input 
+        type="text"
+        value={grocery}
+        onChange={(e) => setGrocery(e.target.value)} />
         <button type="submit"> Submit Grocery </button>
             
         </form>

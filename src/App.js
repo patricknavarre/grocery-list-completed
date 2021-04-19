@@ -29,8 +29,14 @@ function App() {
 
   const [groceryArray, setGroceryArray] = useState(groceryObj)
 
+  function addGrocery(grocery) {
+    console.log(grocery);
+  }
+
   function showGroceryInput() {
-    return <GroceryInput />;
+    return <GroceryInputContext.Provider value={{ addGrocery }}>
+    <GroceryInput />
+    </GroceryInputContext.Provider>;
   }
 
   function showGrocery() {
