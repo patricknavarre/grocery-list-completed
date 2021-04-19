@@ -1,8 +1,11 @@
 import React , { useEffect, useState } from 'react';
-import "./App.css"
+import { GroceryInputContext, GroceryContext} from "./context/context";
 
 import GroceryInput from "./GroceryInput";
 import Grocery from "./Grocery"
+
+import "./App.css"
+
 
 let groceryObj = [
   {
@@ -32,7 +35,16 @@ function App() {
 
   function showGrocery() {
     return groceryArray.map((item) => {
-      return <Grocery key={item.id} />
+      return (
+        <GroceryContext.Provider 
+        key={item.id} 
+        value={{
+          groceryItem: item,
+        }}
+        >
+        <Grocery />
+        </GroceryContext.Provider>
+      )
     })
   }
 
