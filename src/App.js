@@ -11,17 +11,17 @@ import "./App.css"
 
 let groceryObj = [
   {
-    id: 1, 
+    id: uuidv4(), 
     grocery: "lobster",
     isGrabbed: false,
   },
   {
-    id: 2,
+    id: uuidv4(),
     grocery: "steak",
     isGrabbed: false,
   }, 
   {
-    id: 3,
+    id: uuidv4(),
     grocery: "cheese",
     isGrabbed: false,
   }
