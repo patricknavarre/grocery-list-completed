@@ -50,7 +50,10 @@ function App() {
   }
 
   function handleDeleteGroceryById(id) {
-    console.log(id);
+    // console.log(id);
+    let newFilteredGroceryArray = groceryArray.filter((item) => item.id !== id);
+
+    setGroceryArray(newFilteredGroceryArray)
   }
 
   function showGrocery() {
