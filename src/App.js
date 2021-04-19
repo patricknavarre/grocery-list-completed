@@ -56,6 +56,10 @@ function App() {
     setGroceryArray(newFilteredGroceryArray)
   }
 
+  function handleGrabbedGroceryById(id) {
+    console.log(id);
+  }
+
   function showGrocery() {
     return groceryArray.map((item) => {
       return (
@@ -63,7 +67,8 @@ function App() {
         key={item.id} 
         value={{
           groceryItem: item,
-          handleDeleteGroceryById
+          handleDeleteGroceryById,
+          handleGrabbedGroceryById
         }}
         >
         <Grocery />
