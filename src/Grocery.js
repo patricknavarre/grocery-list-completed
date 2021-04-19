@@ -5,13 +5,14 @@ function Grocery() {
 
     const {
         groceryItem: {id, grocery },
+        handleDeleteGroceryById
     } = useContext(GroceryContext);
 
     return (
         <div>
            {grocery}
            <button>Grabbed</button>
-           <button>Delete</button>
+           <button onClick={() => handleDeleteGroceryById(id)}>Delete</button>
         </div>
     )
 }
