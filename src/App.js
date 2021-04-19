@@ -40,6 +40,8 @@ function App() {
         isGrabbed: false,
       }
     ]
+
+    setGroceryArray(newAddedGroceryArray)
     console.log(grocery);
   }
 
