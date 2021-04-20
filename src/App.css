@@ -37,3 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
+.strike-thru-isGrabbed {
+  text-decoration: line-through;
+}

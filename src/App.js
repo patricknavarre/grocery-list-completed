@@ -59,8 +59,18 @@ function App() {
   }
 
   function handleGrabbedGroceryById(id) {
+
     console.log(id);
+    let updatedGroceryListArray = groceryArray.map((item) => {
+      if (item.id === id) {
+        item.isGrabbed = !item.isGrabbed
+      }
+      return item;
+    })
+    setGroceryArray(updatedGroceryListArray)
   }
+
+  
 
   function showGrocery() {
     return groceryArray.map((item) => {
